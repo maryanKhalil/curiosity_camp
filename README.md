@@ -1,2 +1,2 @@
-# curiosity_camp
+# Curiosity Camp
 Webpage made with reactjs.
