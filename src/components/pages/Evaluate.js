@@ -1,110 +1,5 @@
-// import React from 'react';
 
-// import Cards from '../Cards';
-//import ReactDOM from "react-dom"
 import Footer from '../Footer';
-
-// function Evaluate() {
-//   return (
-//     <>
-//       <Cards />
-//       <Footer />
-//     </>
-//   );
-// }
-
-// export default Evaluate;
-
-
-
-// import React, { Component } from "react";
-
-
-// import * as Survey from "survey-react";
-
-
-// //import 'bootstrap/dist/css/bootstrap.css';
-// import "survey-react/survey.css";
-// import "../survey.css";
-// import '../../App.css';
-// import { size } from "lodash";
-// Survey.StylesManager.applyTheme("bootstrap");
-
-// class SurveyComponent extends Component {
-//     constructor() {
-//         super();
-        
-//     }
-//     render() {
-        
-
-//         const json = {
-//   title: "American History",
-//   showProgressBar: "bottom",
-//   showTimerPanel: "top",
-//   maxTimeToFinishPage: 10,
-//   maxTimeToFinish: 25,
-//   firstPageIsStarted: true,
-//   startSurveyText: "Start Quiz",
-//   pages: [
-//     { questions: [ {type: "html", html: "You are about to start quiz by history. <br/>You have 10 seconds for every page and 25 seconds for the whole survey of 3 questions.<br/>Please click on <b>'Start Quiz'</b> button when you are ready." } ] },
-//     {
-//       questions: [
-//         {
-//           type: "radiogroup",
-//           name: "civilwar",
-//           title: "When was the Civil War?",
-//           choices: [ "1750-1800", "1800-1850", "1850-1900", "1900-1950", "after 1950" ],
-//           correctAnswer: "1850-1900"
-//         }
-//       ]
-//     },
-//     {
-//       questions: [
-//         {
-//           type: "radiogroup",
-//           name: "libertyordeath",
-//           title: "Who said 'Give me liberty or give me death?'",
-//           choicesOrder: "random",
-//           choices: [ "John Hancock", "James Madison", "Patrick Henry", "Samuel Adams" ],
-//           correctAnswer: "Patrick Henry"
-//         }
-//       ]
-//     },
-//     {
-//       maxTimeToFinish: 15,
-//       questions: [
-//         {
-//           type: "radiogroup",
-//           name: "magnacarta",
-//           title: "What is the Magna Carta?",
-//           choicesOrder: "random",
-//           choices: [ "The foundation of the British parliamentary system", "The Great Seal of the monarchs of England", "The French Declaration of the Rights of Man", "The charter signed by the Pilgrims on the Mayflower" ],
-//           correctAnswer: "The foundation of the British parliamentary system"
-//         }
-//       ]
-//     }
-//   ],
-//   completedHtml: "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>"
-// };
-// const survey = new Survey.Model(json);
-
-        
-
-//         return (
-//           <>
-//           <span className="survey" style={{fontSize: "20px"}}>
-//             <Survey.Survey
-//                 model={survey} />
-//                 </span>  
-//                 <Footer />
-//               </>
-//         );
-//     }
-// }
-
-// export default SurveyComponent;
-
 import React from "react";
 import ReactDOM from "react-dom";
 import * as Survey from "survey-react";
@@ -140,7 +35,7 @@ class SurveyComponent extends React.Component {
             "Team Work",
             "Responsable",
             "Leadership",
-            "Dicsision making",
+            "Decision making",
             "Strategic thinking ",
             "Patience",
             "Collaboration",
@@ -159,17 +54,13 @@ class SurveyComponent extends React.Component {
           colCount: 4,
           choicesOrder: "asc",
           choices: [
-            "Reading",
+            "Running",
             "Building",
             "Writing",
             "Learning",
-            "Science",
-            "Sport Science",
-            "Space",
-            "Drawing",
-            "Electronics",
-            "Mathematics",
-            "Astronomy"
+            "Socialising",
+            "Weightlifting",
+            
           ]
         },{
           type: "matrix",
@@ -311,7 +202,6 @@ class SurveyComponent extends React.Component {
           colCount: 4,
           choicesOrder: "asc",
           choices: [
-            "6 to 8 years old",
             "8 to 10 years old",
             "10 to 12 year old",
             "12 to 14 year old",
@@ -329,7 +219,7 @@ class SurveyComponent extends React.Component {
       />
     ) : null;
     var onCompleteComponent = this.state.isCompleted ? (
-      <div> <p style={{textAlign: "center"}}>According to your answers we think one activity you deffinitly must try is <em style={{color: 'white'}}>VOLCANO CONSTRUCTION!</em> <br/> However, to get more info about our activities and the updated list send to you, don't forget to sign up to our newsletter!</p></div>
+      <div> <p style={{textAlign: "center"}}>According to your answers we think one activity you definitly must try is <em style={{color: 'white'}}>Robotics Camp!</em> <br/> However, to get more info about our activities and the updated list send to you, don't forget to sign up to our newsletter!</p></div>
     ) : null;
     return (
       <div className="survey">
@@ -346,7 +236,7 @@ function Evaluate() {
   return (
     <div className="App">
     <div className="Survey" >
-      <h1>Stem Camp Survey</h1>
+      <h1>STEM Camp Survey <i class="far fa-file-alt"></i></h1>
       <h2>This Survey will help you determine which STEM activity you would prefer the most!</h2>
       <br/>
       <SurveyComponent />

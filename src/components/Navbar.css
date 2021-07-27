@@ -46,7 +46,15 @@
 }
 
 .nav-item {
-  height: 80px;
+  
+  margin-top: 25px;
+}
+.nav-item-help{
+  padding-left: 30px;
+  margin-bottom: 30px;
+  margin-left: 5px;
+  text-align: left;
+
 }
 
 .nav-links {
@@ -61,6 +69,7 @@
 .nav-links:hover {
   border-bottom: 4px solid #fff;
   transition: all 0.2s ease-out;
+  color: white;
 }
 
 .fa-bars {
@@ -73,6 +82,15 @@
 
 .menu-icon {
   display: none;
+}
+.custom-select{
+  margin-top: 25px;
+  margin-left: 5px;
+  background-color: black;
+  color: white;
+  height: 45px;
+  font-size: 18px;
+
 }
 
 @media screen and (max-width: 960px) {
@@ -109,7 +127,7 @@
 
   .nav-links:hover {
     background-color: #fff;
-    color: #242424;
+    color: #fff;
     border-radius: 0;
   }
 
@@ -118,7 +136,17 @@
     top: 0;
     left: 0;
     transform: translate(25%, 50%);
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
   }
+
+  .navbar-logo:hover {
+    color: white;
+    
+  }
+
 
   .menu-icon {
     display: block;
@@ -152,7 +180,8 @@
 
   .nav-links-mobile:hover {
     background: #fff;
-    color: #242424;
     transition: 250ms;
+
   }
+
 }

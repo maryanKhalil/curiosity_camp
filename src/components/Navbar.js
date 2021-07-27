@@ -3,7 +3,27 @@ import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-function Navbar() {
+function Navbar(props) {
+  let content = {
+    English: {
+      home: "Home",
+      evaluate: "Evaluate",
+      activities: "Activities",
+      register: "Register",
+      
+    },
+    French: {
+      home: "Acceuil",
+      evaluate: "Évaluer",
+      activities: "Activités",
+      register: "S'inscrire",
+      
+    }
+  };
+
+  props.language === "French"
+    ? (content = content.French)
+    : (content = content.English);
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -29,16 +49,29 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+          <i class="fas fa-rocket" />
             Curiosity Camp
-            <i class='fab fa-typo3' />
+            
           </Link>
+
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
+
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+          <select
+            className="custom-select"
+            value={props.language}
+            onChange={e => props.handleSetLanguage(e.target.value)}
+          >
+          <option value="language"> Language</option>
+            <option value="English">English</option>
+            <option value="French">Français</option>
+          </select>
+          
             <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Home
+                {content.home}
               </Link>
             </li>
             <li className='nav-item'>
@@ -47,7 +80,7 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Evaluate
+                {content.evaluate}
               </Link>
             </li>
             <li className='nav-item'>
@@ -56,21 +89,33 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Activities
+                {content.activities}
               </Link>
             </li>
 
             <li>
               <Link
-                to='/Register'
+                to='/sign-up'
                 className='nav-links-mobile'
                 onClick={closeMobileMenu}
               >
                 Register
+
               </Link>
             </li>
+          
           </ul>
-          {button && <Button buttonStyle='btn--outline'>Register</Button>}
+          {button && <Button class='bouton'>{content.register}</Button>}
+          <li className='nav-item-help'>
+              <Link
+                to='/help'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                <i class="fas fa-info-circle"></i>
+
+              </Link>
+            </li>
         </div>
       </nav>
     </>

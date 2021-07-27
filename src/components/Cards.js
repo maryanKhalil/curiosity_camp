@@ -5,52 +5,52 @@ import CardItem from './CardItem';
 function Cards() {
   return (
     <div className='cards'>
-      <h1>Check out these Past Years Adventures!</h1>
+      <h1>Check out these Past Years Adventures! <i class="fas fa-camera"></i></h1>
 
         <div className='cards__wrapper'>
           <ul className='cards__items'>
             <CardItem
-              src='images/img-9.jpg'
-              text='Explore the land'
+              src='images/land.jpeg'
+              text='Experiment in the land'
               //label='Land'
               path='/services'
             />
             <CardItem
-              src='images/img-2.jpg'
-              text='Explore the sea'
+              src='images/sea2.jpeg'
+              text='Experiment in the sea'
              // label='Sea'
               path='/services'
             />
 
             <CardItem
-              src='images/img-10.jpg'
-              text='Explore the sky'
+              src='images/air.jpg'
+              text='Experiment in the sky'
              // label='Sky'
               path='/services'
             />
           </ul>
           </div>
-          <h1>Learn more about our Activities</h1>
+          <h1>Learn more about our Activities <i class="fas fa-gamepad"></i></h1>
         <div className='cards__wrapper'>
 
           <ul className='cards__items'>
             <CardItem
-              src='images/img-3.jpeg'
-              text='Campfire Building'
+              src='images/robotics.jpeg'
+              text='Robotics'
              // label='New experience'
               path='/services'
             />
             <CardItem
-              src='images/img-4.jpeg'
-              text='Horseback Riding'
+              src='images/rocket.jpeg'
+              text='Bottle Rockets'
              // label='Fun'
               path='/products'
             />
             <CardItem
-              src='images/img-8.jpeg'
-              text='Mountain Biking'
+              src='images/Bursting Chemistry Solution.jpeg'
+              text='Bursting Chemistry Solution'
              // label='Workout'
-              path='/sign-up'
+              path='/Register'
             />
           </ul>
 

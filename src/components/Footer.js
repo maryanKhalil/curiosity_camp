@@ -21,7 +21,8 @@ function Footer() {
             <Button buttonStyle='btn--outline'>Subscribe</Button>
           </form>
 
-          
+          <h5 style={{paddingTop:"20px"}}>Contact us at (666)-200-4567</h5>
+          <h5>or by email at curiositycamp@outlook.com</h5>
         </div>
       </section>
       
